@@ -1,0 +1,52 @@
+digraph cfg {
+subgraph fun_0x7fbba4c42000 {
+bb_0x7fbba4c42000_0[label="ENTRY: test
+test.cc:7"];
+bb_0x7fbba4c42000_0 -> bb_0x7fbba4c42000_2;
+bb_0x7fbba4c42000_2[label="i = 0;
+"];
+bb_0x7fbba4c42000_2 -> bb_0x7fbba4c42000_3;
+bb_0x7fbba4c42000_3[label="if (i >= n)
+"];
+bb_0x7fbba4c42000_3 -> bb_0x7fbba4c42000_10;
+bb_0x7fbba4c42000_3 -> bb_0x7fbba4c42000_4;
+bb_0x7fbba4c42000_4[label="_1 = i % 3;
+div_3 = _1 == 0;
+_2 = i % 5;
+div_5 = _2 == 0;
+_3 = (int) div_3;
+_4 = (int) div_5;
+_5 = _4 << 1;
+_6 = _3 | _5;
+switch (_6) <default: <L5> [INV], case 1: <L2> [INV], case 2: <L3> [INV], case 3: <L4> [INV]>
+"];
+bb_0x7fbba4c42000_4 -> bb_0x7fbba4c42000_8;
+bb_0x7fbba4c42000_4 -> bb_0x7fbba4c42000_5;
+bb_0x7fbba4c42000_4 -> bb_0x7fbba4c42000_6;
+bb_0x7fbba4c42000_4 -> bb_0x7fbba4c42000_7;
+bb_0x7fbba4c42000_5[label="<L2>:
+fizz ();
+"];
+bb_0x7fbba4c42000_5 -> bb_0x7fbba4c42000_9;
+bb_0x7fbba4c42000_6[label="<L3>:
+buzz ();
+"];
+bb_0x7fbba4c42000_6 -> bb_0x7fbba4c42000_9;
+bb_0x7fbba4c42000_7[label="<L4>:
+fizzbuzz ();
+"];
+bb_0x7fbba4c42000_7 -> bb_0x7fbba4c42000_9;
+bb_0x7fbba4c42000_8[label="<L5>:
+print_number (i);
+"];
+bb_0x7fbba4c42000_8 -> bb_0x7fbba4c42000_9;
+bb_0x7fbba4c42000_9[label="i = i + 1;
+"];
+bb_0x7fbba4c42000_9 -> bb_0x7fbba4c42000_3;
+bb_0x7fbba4c42000_10[label="return;
+"];
+bb_0x7fbba4c42000_10 -> bb_0x7fbba4c42000_1;
+bb_0x7fbba4c42000_1[label="EXIT: test
+test.cc:32"];
+}
+}

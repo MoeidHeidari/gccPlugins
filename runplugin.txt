@@ -1,0 +1,5 @@
+$GCCDIR/g++ -fplugin=$BASEDIR/gcc-plugins/warn_unused.so -c test.cc -o /dev/null 2> test.dot
+dot -Tpdf test.dot > test.pdf
+xdg-open test.pdf
+----------------------------------run a plugin-----------------------------------
+$GCCDIR/g++ -fplugin=$BASEDIR/gcc-plugins/warn_unused.so -o test -c test.cc
